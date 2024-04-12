@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog card</title>
+    <style> 
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+
+    }
+    .blog{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+    }
+    .post-card{
+        background-color: white;
+        border-radius: 5px;
+        box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1) ;
+        margin: 10px;
+        padding: 10px;
+        width: 300px;
+    }
+    .post-tittle{
+        font-size: 20px;
+        margin:10px 0;
+    }
+    .post-content{
+        font-size: 14px;
+        color: #444;
+    }
+    .post-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .post-date{
+        font-size: 12px;
+        color:#888
+    }
+    .read-more{
+        text-decoration: none;
+        font-size: 14px;
+        color:blue;
+    }
+    </style>
+</head>
+<body>
+    <main class="blog">
+        <article class="post-card">
+            <h2 class="post-tittle">Titulo de la publicacion</h2>
+            <p class="post-content">Contenido de la aplicaion aqui</p>
+            <footer class="post-footer">
+                <time class="post-date" datetime="2024-04-11">11 de Abril de 2024
+                </time>
+                <a href="#" class="read-more">Leer mas</a>
+            </footer>
+        </article>
+        <article class="post-card">
+            <h2 class="post-tittle">Titulo de la publicacion</h2>
+            <p class="post-content">Contenido de la aplicaion aqui</p>
+            <footer class="post-footer">
+                <time class="post-date" datetime="2024-04-13">13 de Abril de 2024
+                </time>
+                <a href="#" class="read-more">Leer mas</a>
+            </footer>
+        </article>
+        <article class="post-card">
+            <h2 class="post-tittle">Titulo de la publicacion</h2>
+            <p class="post-content">Contenido de la aplicaion aqui</p>
+            <footer class="post-footer">
+                <time class="post-date" datetime="2024-04-14">14 de Abril de 2024
+                </time>
+                <a href="#" class="read-more">Leer mas</a>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
