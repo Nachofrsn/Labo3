@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: left 0.3s;
+  z-index: 2;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.abrir-menu {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 2;
+  transition: left 0.3s;
+  border-radius: 50%;
+}
+
+.abrir-menu::after {
+  content: attr(data-open);
+}
+
+#toggle-menu:checked+.abrir-menu::after {
+  content: attr(data-close);
+}
+
+.lista-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-menu li {
+  padding: 10px 0;
+}
+
+.lista-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.lista-menu a:hover {
+  background-color: #5366f5;
+}
+
+#toggle-menu:checked~.menu {
+  left: 0;
+}
+
+#toggle-menu:checked~.abrir-menu {
+  left: 250px;
+}
+
+#toggle-menu:checked~.contenido {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.contenido {
+  transition: background-color 0.3s;
+}

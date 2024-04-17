@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tarjeta-producto {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.imagen-producto {
+  height: 200px;
+  background-image: url('imagen-producto.jpg');
+  background-size: cover;
+}
+
+.detalles {
+  padding: 20px;
+}
+
+.detalles h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.detalles p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.precio {
+  text-align: center;
+  font-size: 18px;
+  color: #ff6600;
+}
+
+.tarjeta-producto::before {
+  content: "Ver detalles";
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+
+.tarjeta-producto:hover::before {
+  bottom: -40px;
+  opacity: 0.8;
+}
