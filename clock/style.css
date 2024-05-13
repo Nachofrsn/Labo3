@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #000;
+    --background-color: #5d72a1;
+    --numbers-color: #0037ff;
+    --clock-border-color: #fff8dc;
+    --clock-background-color: #fff;
+  }
+  
+  .dark {
+    --primary-color: #fff;
+    --background-color: #001e34;
+    --numbers-color: #93abff;
+    --clock-border-color: #000;
+    --clock-background-color: #2b2b2b;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    padding: 0;
+    margin: 0;
+  }
+  
+  .clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--clock-background-color);
+    margin: 30px auto 0px auto;
+    position: relative;
+    border: 20px solid var(--clock-border-color);
+  }
+  
+  .center {
+    background-color: var(--primary-color);
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 20;
+  }
+  
+  .hour {
+    width: 10px;
+    height: 75px;
+    background-color: var(--primary-color);
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 75px;
+    left: 145px;
+    z-index: 10;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transform: rotate(360deg);
+  }
+  
+  .minute {
+    width: 5px;
+    height: 120px;
+    background-color: var(--primary-color);
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 30px;
+    left: 147px;
+    z-index: 9;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transform: rotate(90deg);
+  }
+  
+  .second {
+    width: 2px;
+    height: 120px;
+    background-color: red;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 30px;
+    left: 149px;
+    transition: all 0.06s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    z-index: 8;
+    transform: rotate(360deg);
+  }
+  
+  .time {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    border: 1px solid var(--clock-border-color);
+    background-color: var(--clock-background-color);
+    padding: 5px;
+    display: block;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    min-width: 70px;
+    height: 15px;
+    color: var(--primary-color);
+  }
+  
+  .time small {
+    color: var(--numbers-color);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  
+  .clock ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .clock ul li {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+    color: var(--numbers-color);
+  }
+  
+  .clock ul li:nth-child(1) {
+    right: 22%;
+    top: 6.5%;
+  }
+  
+  .clock ul li:nth-child(2) {
+    right: 6%;
+    top: 25%;
+  }
+  
+  .clock ul li:nth-child(3) {
+    right: 1%;
+    top: calc(50% - 10px);
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .clock ul li:nth-child(4) {
+    right: 6%;
+    top: 69%;
+  }
+  
+  .clock ul li:nth-child(5) {
+    right: 22%;
+    top: 84%;
+  }
+  
+  .clock ul li:nth-child(6) {
+    right: calc(50% - 10px);
+    top: calc(99% - 20px);
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .clock ul li:nth-child(7) {
+    left: 22%;
+    top: 84%;
+  }
+  
+  .clock ul li:nth-child(8) {
+    left: 6%;
+    top: 69%;
+  }
+  
+  .clock ul li:nth-child(9) {
+    left: 1%;
+    top: calc(50% - 10px);
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .clock ul li:nth-child(10) {
+    left: 6%;
+    top: 25%;
+  }
+  
+  .clock ul li:nth-child(11) {
+    left: 22%;
+    top: 6.5%;
+  }
+  
+  .clock ul li:nth-child(12) {
+    right: calc(50% - 10px);
+    top: 1%;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .toggle {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--clock-background-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 20px auto;
+  }
+  
+  .toggle:focus {
+    outline: none;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .date-container span {
+    color: var(--primary-color);
+    font-size: 20px;
+  }
