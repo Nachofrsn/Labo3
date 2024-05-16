@@ -1,0 +1,83 @@
+:root {
+    --primary-color : #111;
+    --seconday-color: #1d1d1d;
+    --tertiary-color: #ccc;
+    --text-color: #fff;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--seconday-color);
+
+}
+
+form>label {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+}
+
+form>input {
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form>button:hover {
+    background-color: var(--text-color);
+    color: var(--tertiary-color);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+
+.square {
+    background-color: var(--seconday-color);
+    box-shadow: 0 0 2px var(--tertiary-color);
+    margin: 2px;
+    width: 16px;
+    height: 16px;
+    transition: all ease 2s;
+}
+
+.square:hover {
+    transition-duration: 0s;
+}

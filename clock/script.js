@@ -4,6 +4,7 @@ const $second = document.querySelector('.second');
 const $center = document.querySelector('.center');
 const $time = document.querySelector('.time');
 const $date = document.querySelector('.date-container');
+const $button = document.querySelector('.toggle');
 
 const days = [
     "domingo",
@@ -29,6 +30,17 @@ const months = [
     "noviembre",
     "diciembre",
 ]
+
+$button.addEventListener('click', (event) => {
+    const $html = document.querySelector('html');
+    $html.classList.toggle('dark');
+    if ($html.classList.contains('dark')){
+        event.target.innerHTML = 'Light Mode';
+    }
+    else {
+        event.target.innerHTML = 'Dark Mode';
+    }
+});
 
 const checkDigit = (digit) => digit < 10 ? `0${digit}` : digit;
 
